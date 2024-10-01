@@ -46,7 +46,7 @@ function App() {
             <div className='font-montserrat font-hairline text-pale-grey text-[25px] md:text-[30px]'>
               ONLY
             </div>
-            <div className='flex items-center flex-wrap justify-center'>
+            <div className='flex items-center flex-wrap justify-center flex-col md:flex-row mt-4 md:mt-0'>
               <div className='flex justify-center items-baseline mt-[-45px]'>
                 <div className='text-[60px] md:text-[80px] mr-6 font-arefRuqaa'>
                   {monthsUntilWedding}
@@ -55,7 +55,7 @@ function App() {
                   Months
                 </div>
               </div>
-              <div className='font-montserrat font-hairline text-pale-grey text-[30px] ml-40 mr-20 md:mx-8 md:text-[50px] leading-[30px]'>
+              <div className='font-montserrat font-hairline text-pale-grey text-[30px] md:mx-8 md:text-[50px] leading-[20px] mb-3 md:mb-0'>
                 &
               </div>
               <div className='flex justify-center items-baseline mt-[-45px]'>
