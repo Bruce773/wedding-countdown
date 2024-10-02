@@ -13,9 +13,10 @@ function App() {
   const totalMonths =
     (weddingDate.getFullYear() - currentDate.getFullYear()) * 12 +
     (weddingDate.getMonth() - currentDate.getMonth());
-  const totalDays = Math.floor(
-    (weddingDate.getTime() - currentDate.getTime()) / (1000 * 60 * 60 * 24)
-  );
+  const totalDays =
+    Math.floor(
+      (weddingDate.getTime() - currentDate.getTime()) / (1000 * 60 * 60 * 24)
+    ) + 1;
   const monthsUntilWedding = totalMonths;
   const daysAfterMonth = totalDays - monthsUntilWedding * 30;
 
@@ -30,7 +31,7 @@ function App() {
       </div>
       <div className='flex items-center justify-center h-screen'>
         <div className='h-fit'>
-          <div className='pt-2 md:pt-0 flex items-center justify-center flex-wrap'>
+          <div className='pt-2 md:pt-0 flex items-center justify-center flex-wrap flex-col md:flex-row'>
             <img alt='' className='h-[70px] md:h-auto' src={Bruce} />
             <img
               alt=''
