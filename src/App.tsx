@@ -8,17 +8,24 @@ import PhotoBanner from './photos-banner.svg';
 
 function App() {
   const weddingDate = new Date('2025-01-03');
-
   const currentDate = new Date();
+
+  // Calculate the total number of months until the wedding
+  const yearsDifference = weddingDate.getFullYear() - currentDate.getFullYear();
+  const monthsDifference = weddingDate.getMonth() - currentDate.getMonth();
   const totalMonths =
-    (weddingDate.getFullYear() - currentDate.getFullYear()) * 12 +
-    (weddingDate.getMonth() - currentDate.getMonth());
-  const totalDays =
-    Math.floor(
-      (weddingDate.getTime() - currentDate.getTime()) / (1000 * 60 * 60 * 24)
-    ) + 1;
+    yearsDifference * 12 +
+    monthsDifference -
+    (currentDate.getDate() > weddingDate.getDate() ? 1 : 0);
+
+  // Calculate the number of days after the last full month until the wedding
+  const futureMonthDate = new Date(currentDate);
+  futureMonthDate.setMonth(currentDate.getMonth() + totalMonths);
+  const daysAfterMonth = Math.floor(
+    (weddingDate.getTime() - futureMonthDate.getTime()) / (1000 * 60 * 60 * 24)
+  );
+
   const monthsUntilWedding = totalMonths;
-  const daysAfterMonth = totalDays - monthsUntilWedding * 30;
 
   return (
     <div>
