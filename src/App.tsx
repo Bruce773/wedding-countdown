@@ -21,11 +21,11 @@ function App() {
   // Calculate the number of days after the last full month until the wedding
   const futureMonthDate = new Date(currentDate);
   futureMonthDate.setMonth(currentDate.getMonth() + totalMonths);
-  const daysAfterMonth = Math.floor(
-    (weddingDate.getTime() - futureMonthDate.getTime()) / (1000 * 60 * 60 * 24)
-  );
+  // const daysAfterMonth = Math.floor(
+  //   (weddingDate.getTime() - futureMonthDate.getTime()) / (1000 * 60 * 60 * 24)
+  // );
 
-  const monthsUntilWedding = totalMonths;
+  // const monthsUntilWedding = totalMonths;
 
   return (
     <div>
@@ -51,30 +51,33 @@ function App() {
             <img alt='' className='h-[300px] md:h-[400px]' src={PhotoBanner} />
           </div>
           <div className='text-center md:mt-14'>
-            <div className='font-montserrat font-hairline text-pale-grey text-[25px] md:text-[30px]'>
+            {/* <div className='font-montserrat font-hairline text-pale-grey text-[25px] md:text-[30px]'>
               ONLY
-            </div>
+            </div> */}
             <div className='flex items-center flex-wrap justify-center flex-col md:flex-row mt-4 md:mt-0'>
               <div className='flex justify-center items-baseline mt-[-45px]'>
-                <div className='text-[60px] md:text-[80px] mr-6 font-arefRuqaa'>
-                  {monthsUntilWedding}
+                <div className='text-[50px] md:text-[80px] mr-6 font-arefRuqaa'>
+                  0
                 </div>
                 <div className='text-[40px] font-arefRuqaa text-the-purplest'>
                   Months
                 </div>
               </div>
-              <div className='font-montserrat font-hairline text-pale-grey text-[30px] md:mx-8 md:text-[50px] leading-[20px] mb-3 md:mb-0'>
+              <div className='font-montserrat font-hairline text-pale-grey text-[30px] md:mx-8 md:text-[40px] leading-[20px] mb-[1.65rem] md:mb-0'>
                 &
               </div>
               <div className='flex justify-center items-baseline mt-[-45px]'>
-                <div className='text-[60px] md:text-[80px] mr-6 font-arefRuqaa'>
-                  {daysAfterMonth}
+                <div className='text-[50px] md:text-[80px] mr-6 font-arefRuqaa'>
+                  0
                 </div>
                 <div className='text-[40px] font-arefRuqaa text-the-purplest'>
                   Days
                 </div>
               </div>
             </div>
+          </div>
+          <div className='text-center text-[40px] font-arefRuqaa text-the-purplest'>
+            We're Married!
           </div>
         </div>
       </div>
